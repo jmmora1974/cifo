@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practica 2 Formulario typescript</title>
+        <script>var exports = {};</script>
+        <link rel='stylesheet' type='text/css' media='screen' href='./styles/style.css'>
+        
+    </head>   
+<body>
+    <h1>Practica 2 - Formulario typescript</h1>
+    <div class="row">
+        <div class="column left" style="background-color:none;">
+           
+        </div>
+        <div class="column middle" style="background-color:none;">
+            <section id="sec1" style="background-color:rgb(146, 143, 143);">
+                <div id="divform">
+                <h3>Introduce nuevo libro</h3>
+                <form id="formlibros" target="_parent">
+                   <label for="titulolibro">Titulo del libro:
+                       <input type="text" id="titulolibro"  placeholder="Titulo del libro"/>
+                   </label><br/>
+                   <label for="categoria">Categoria del libro:
+                       <select id="selcat">
+                        <option value="0">Sin categoria:</option>
+                        </select>
+                   </label><br/>
+                 <label for="descipcionlibro">Descripción del libro:<br/>
+                       <textarea type="textarea" id="descipcionlibro" placeholder="Descripción del libro" hegth="600px"></textarea>
+                   </label><br/>
+                   <label for="valoracion"  class="rating-label">Valoración del libro: <span id="vrating">1</span><br/>
+                    <input type="range" id="valoracionlibro"  class="rating" min="0" max="5" defaultvalue="1" value="1" oninput="this.style.setProperty('--value', this.value)"
+                    step="0.1" onchange="onChangeRating(valoracionlibro.value)"/> 
+                    
+                </label><br/>
+
+                   <label for="precio">Precio:
+                    <input type="number" id="preciolibro" value="0" />€
+                </label><br/>
+                   <button type="button" id="btnagrega" onclick="agregaLibro(titulolibro.value)">Agregar libro</button>
+            </form>
+        </div>
+
+        </div>
+        <div class="column right" style="background-color:none;">
+                  
+        </div>
+      </div>
+      <h2>Lista de libros: </h2>
+      <div id="divlibreria">
+        
+      </div>
+    
+      <script src="www/src/app.js" defer></script>
+      
+
+</body>
+</html>
