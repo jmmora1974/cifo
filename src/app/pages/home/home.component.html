@@ -1,0 +1,62 @@
+<h1>{{title}}</h1>
+<button id="btnnewuser" type="button" routerLink="/formUser">Nou usuari</button>
+
+<div id="content-grid">
+<div id="titulo" class="grid-usuaris" background-color="grey">
+<div ><h2>Id</h2></div>
+<div><h2>Nom</h2></div>
+<div><h2>Cognom</h2></div>  
+<div ><h2>Email</h2></div>   
+<div ><button class="btntrash" (click)="borraListaUsuarios()"><i class="fa fa-trash"></i> Borra agenda</button></div> 
+</div>
+
+
+  <div id="grid-usuaris" class="grid-usuaris" *ngFor="let usuari of usuaris" >
+    <div>{{usuari.id}}</div>
+    <div >{{usuari.nom}}</div>
+    <div>{{usuari.cognom}}</div>
+    <div>{{usuari.email}}</div>
+    <div id="botons-grid">  
+      <button class="botonAgrega" mat-raised-button  (click)="abredialogo(usuari)">Modifica
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button class="btntrash" (click)="borraUsuari(usuari)"><i class="fa fa-trash"></i></button>
+    </div> 
+  </div>
+</div>
+<!-----
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+ 
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> nom </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+  
+    <ng-container matColumnDef="nom">
+      <th mat-header-cell *matHeaderCellDef> Nom </th>
+      <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="cognom">
+      <th mat-header-cell *matHeaderCellDef> cognom </th>
+      <td mat-cell *matCellDef="let element"> {{element.cognom}} </td>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+     
+    </tr>
+    
+  </table>
+  
+-->

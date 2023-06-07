@@ -1,0 +1,51 @@
+#titulo{
+    margin-top: 20px;
+}
+#btnnewuser{
+  margin-left:40px ;
+}
+#content-grid{
+  display: -ms-flexbox;
+}
+.grid-usuaris {
+    width: 1130px;
+    display: grid;
+    grid-template-columns: 60px 200px 300px 400px  130px;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 5px;
+  }
+  
+  .grid-usuaris > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: justify;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1rem;
+    display: flex;
+    place-items: center;
+    
+  }
+  
+  /* Style buttons */
+  .botonAgrega{
+    
+    margin: 5px;
+  
+  }
+  .btntrash {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  .btntrash:hover {
+    background-color: RoyalBlue;
+     cursor: pointer;
+  }
+  
+ 

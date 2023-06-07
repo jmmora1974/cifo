@@ -1,0 +1,26 @@
+<div mat-dialog-content>
+<h1 mat-dialog-title>Modificació de dades de l'usuari</h1>
+
+  L'usuari a modificar: <br/>
+  <div id="divform">
+    <form method="dialog" [formGroup]="usuariForm" >
+        <label for="id">Id: 
+        <input id="id"  type="text" readonly [attr.disabled]=true  formControlName="id" >
+         </label>
+        <label for="nom">Nom: </label>
+        <input id="nom" type="text" formControlName="nom" required>
+  
+        <label for="cognom">Cognom: </label>
+        <input id="cognom" type="text" formControlName="cognom" required>
+
+        <label for="email">Email: </label>
+        <input id="email" type="text" formControlName="email" required>
+
+        <br/><small >*Omple tots els camps.</small><br/>
+        <mat-dialog-actions align="end">
+          <button mat-button mat-dialog-close (click)="onNoClick()">Cancel</button>
+          <button mat-button [mat-dialog-close]="true" [disabled]="!usuariForm.valid"  (click)="actualitzaUsuari(data)" cdkFocusInitial>Guardar</button>
+        </mat-dialog-actions>
+    </form>
+</div>
+

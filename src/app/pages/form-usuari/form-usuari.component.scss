@@ -1,0 +1,61 @@
+
+
+/* Crea 3 columnas iguales. Usaremos la central para el codigo.*/
+.column {
+    float: left;
+    padding: 10px;
+    
+  }
+  
+  .left, .right {
+    width: 20%;
+   
+  }
+  
+  .middle {
+    width: 60%;
+    height: 300px;
+    display: flex;
+  
+  }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    h1{
+      width: 100%;
+      text-align: center;
+      background-color: #6483;
+    }
+
+    label{
+        display: block;
+        margin-left: 5px;
+    }
+    #sec1 {
+        width: 100%;
+    }
+    #sec1 *{
+        margin: 5px;
+        display:flexbox;
+        #botonAgrega{
+            float: right;
+          } 
+          #id{
+            width: 30px; 
+            
+          }
+          #nom{
+            width: 90%;
+          }
+          #cognom{
+            width: 90%;
+          }
+          #email{
+            width: 90%;
+          }
+      }
+      
